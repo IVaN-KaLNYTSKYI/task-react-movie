@@ -1,0 +1,9 @@
+.movie-list-card{
+    width: 240px;
+    min-height: 400px;
+    margin: 10px;
+}
+.movie-list-card-link{
+    color: black;
+    text-decoration: none;
+}
