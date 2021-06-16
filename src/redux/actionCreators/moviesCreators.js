@@ -6,6 +6,7 @@ import {getMovie, getMovieId, getMovieSearch, getVideo} from "../../services/api
 export const fetchMovies = (page) => async (dispatch) => {
     try {
         const res = await getMovie(page).then()
+        console.log(res)
         const data= await res.data
         console.log(data)
         dispatch(getMoviesCreators(data))

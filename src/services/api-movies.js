@@ -15,7 +15,7 @@ const path = {
 }
 
 const getMovie = (page) => {
-    return axiosInstance.get(path.discover + "?page=" + page); // promise
+    return axiosInstance.get(path.discover + "?page=" + page) // promise
 };
 
 const getMovieId = (id) => {

@@ -16,18 +16,13 @@ export default function MoviesList() {
     const {movies} = useSelector(({movies}) => (movies))
 
     useEffect(() => {
-        dispatch(fetchMovies(page))
-    }, [dispatch, page])
-
-    useEffect(() => {
         if (text === "") {
-            dispatch(fetchMovies(1))
+            dispatch(fetchMovies(page))
         } else {
             dispatch(fetchMovieSearch(page, text))
         }
     }, [dispatch, page, text])
 
-    console.log(movies)
     const next = () => {
         page < movies.total_pages ? setPage(page + 1) : setPage(movies.total_pages)
     }
@@ -43,7 +38,6 @@ export default function MoviesList() {
     const last = () => {
         setPage(movies.total_pages)
     }
-    console.log(text)
 
     return (
         <div className={"movie-list-box"}>
